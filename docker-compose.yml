@@ -1,0 +1,60 @@
+services:
+  postgres:
+    image: postgres:15
+    container_name: sda-pro-postgres
+    environment:
+      POSTGRES_DB: sdapro
+      POSTGRES_USER: sdapro
+      POSTGRES_PASSWORD: sdapro123
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - sda-network
+
+  redis:
+    image: redis:7-alpine
+    container_name: sda-pro-redis
+    ports:
+      - "6379:6379"
+    networks:
+      - sda-network
+
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: sda-pro-rabbitmq
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    networks:
+      - sda-network
+
+  mock-api:
+    build: ./services/mock-api
+    container_name: sda-pro-mock-api
+    ports:
+      - "8082:8080"
+    networks:
+      - sda-network
+    environment:
+      - PORT=8080
+
+  soc-dashboard:
+    build: ./soc-dashboard
+    container_name: sda-pro-dashboard
+    ports:
+      - "5173:5173"
+    environment:
+      - VITE_API_URL=http://localhost:8082
+    networks:
+      - sda-network
+    depends_on:
+      - mock-api
+
+networks:
+  sda-network:
+    driver: bridge
+
+volumes:
+  postgres_data:
