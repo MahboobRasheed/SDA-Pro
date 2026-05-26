@@ -29,3 +29,5 @@ public class CanonicalAlert {
     public Instant getTimestamp() { return timestamp; } 
     public void addEnrichment(String key, Object value) { enrichmentContext.put(key, value); } 
 } 
+ 
+ 
