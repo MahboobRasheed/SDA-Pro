@@ -12,6 +12,7 @@ public class CanonicalAlert {
     private String sourceIp; 
     private String destinationIp; 
     private Instant timestamp; 
+    private Map<String, Object> enrichmentContext;
  
     public CanonicalAlert() { 
         this.id = UUID.randomUUID(); 
@@ -25,9 +26,9 @@ public class CanonicalAlert {
     public String getSeverity() { return severity; } 
     public void setSourceIp(String sourceIp) { this.sourceIp = sourceIp; } 
     public String getSourceIp() { return sourceIp; } 
+    public void setDestinationIp(String destinationIp) { this.destinationIp = destinationIp; } 
+    public String getDestinationIp() { return destinationIp; } 
     public void setTimestamp(Instant timestamp) { this.timestamp = timestamp; } 
     public Instant getTimestamp() { return timestamp; } 
     public void addEnrichment(String key, Object value) { enrichmentContext.put(key, value); } 
 } 
- 
- 
