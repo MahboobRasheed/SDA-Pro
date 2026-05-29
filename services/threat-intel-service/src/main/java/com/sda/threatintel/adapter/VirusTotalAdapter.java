@@ -16,6 +16,7 @@ public class VirusTotalAdapter implements ThreatIntelProvider {
     
     private VirusTotalAPI vtClient;
     
+    // ✅ Make constructor public
     public VirusTotalAdapter() {
         this.vtClient = new VirusTotalAPI();
     }
