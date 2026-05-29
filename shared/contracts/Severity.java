@@ -1,4 +1,4 @@
-package com.sda.shared.contracts;
+package contracts;   // NOT "com.sda.shared.contracts"
 
 public enum Severity {
     LOW(1),

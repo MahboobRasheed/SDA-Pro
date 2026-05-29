@@ -1,4 +1,4 @@
-package shared.events; 
+package events; 
  
 import java.time.Instant; 
 import java.util.UUID; 

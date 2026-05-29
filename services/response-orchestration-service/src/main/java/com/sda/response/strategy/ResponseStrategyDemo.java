@@ -1,7 +1,7 @@
 package com.sda.response.strategy;
 
 import com.sda.response.domain.ResponseContext;
-import com.sda.response.domain.ResponseActionType;
+
 
 // Demo class to test all strategies
 public class ResponseStrategyDemo {

@@ -3,9 +3,8 @@
 // in the entire system. It is the single source of truth for all
 // alert source configurations.
 
-package config;
-
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -60,7 +59,7 @@ public class IngestionConfigManager {
     }
 
     public List<String> getSupportedSources() {
-        return supportedSources;
+        return Collections.unmodifiableList(new ArrayList<>(supportedSources));
     }
 
     public void enableSource(String sourceType) {

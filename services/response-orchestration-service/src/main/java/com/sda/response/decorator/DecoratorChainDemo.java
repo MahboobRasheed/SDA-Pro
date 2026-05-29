@@ -1,7 +1,7 @@
 package com.sda.response.decorator;
 
 import com.sda.response.domain.ActionOutcome;
-import com.sda.response.domain.ResponseActionType;
+
 import com.sda.response.domain.ResponseContext;
 import com.sda.response.executor.ResponseAction;
 import com.sda.response.executor.concrete.BlockIPAction;
@@ -17,7 +17,7 @@ public class DecoratorChainDemo {
         
         // Create a simple action
         ResponseAction blockIPAction = new BlockIPAction();
-        ResponseAction isolateAction = new IsolateEndpointAction();
+       
         
         // Demo 1: Single decorator
         System.out.println("--- DEMO 1: Audit Only ---");

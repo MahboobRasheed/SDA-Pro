@@ -9,7 +9,7 @@ import java.time.Instant;
 // PATTERN: Proxy (Rate Limiting Proxy)
 // RATIONALE: Controls the rate of requests to external APIs,
 //            preventing quota exhaustion and respecting API limits.
-public class RateLimitPwroxy implements ThreatIntelProvider {
+public class RateLimitProxy implements ThreatIntelProvider {  // ✅ "Proxy" not "Pwroxy"
     
     private ThreatIntelProvider realProvider;
     private int maxRequestsPerMinute;

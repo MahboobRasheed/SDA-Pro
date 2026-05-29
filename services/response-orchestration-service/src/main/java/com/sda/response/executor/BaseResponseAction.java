@@ -2,7 +2,7 @@ package com.sda.response.executor;
 
 import com.sda.response.domain.ActionOutcome;
 import com.sda.response.domain.ResponseActionType;
-import com.sda.response.domain.ResponseContext;
+
 
 public abstract class BaseResponseAction implements ResponseAction {
     protected ResponseActionType type;

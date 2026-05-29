@@ -1,4 +1,4 @@
-package com.sda.shared.contracts;
+package contracts;   // NOT "shared.contracts"
 
 public enum AlertSourceType {
     SPLUNK,
