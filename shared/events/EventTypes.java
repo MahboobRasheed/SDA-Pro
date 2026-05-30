@@ -1,4 +1,4 @@
-package shared.events; 
+package events; 
  
 public class EventTypes { 
     public static final String ALERT_INGESTED = "AlertIngested"; 
