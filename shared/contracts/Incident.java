@@ -1,6 +1,6 @@
-package shared.contracts; 
+package contracts; 
  
-import java.time.Instant; 
+
 import java.util.ArrayList; 
 import java.util.List; 
 import java.util.UUID; 
@@ -10,12 +10,12 @@ public class Incident {
     private String title; 
     private String severity; 
     private String currentState; 
-    private Instant createdAt; 
+     
     private List<String> responseHistory; 
  
     public Incident() { 
         this.id = UUID.randomUUID(); 
-        this.createdAt = Instant.now(); 
+         
         this.currentState = "NEW"; 
         this.responseHistory = new ArrayList<>(); 
     } 

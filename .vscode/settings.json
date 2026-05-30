@@ -1,0 +1,10 @@
+{
+    "java.project.sourcePaths": [
+        "services/threat-intel-service/src/main/java",
+        "services/response-orchestration-service/src/main/java",
+        "shared"
+    ],
+    "java.project.outputPath": "target",
+    "java.compile.nullAnalysis.mode": "automatic",
+    "java.configuration.updateBuildConfiguration": "automatic"
+}
